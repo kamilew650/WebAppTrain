@@ -11,6 +11,7 @@ namespace WebAppTrain.Controllers
     {
         public IActionResult Index()
         {
+            //throw new Exception();
             return View();
         }
 
