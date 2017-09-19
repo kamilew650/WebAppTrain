@@ -27,8 +27,8 @@ namespace WebAppTrain
         {
             services.AddMvc();
 
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;";
-            services.AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=WebAppTrainDb;Trusted_Connection=True;";
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
