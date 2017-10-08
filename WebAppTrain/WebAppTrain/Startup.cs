@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using WebAppTrain.Models;
 using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using AutoMapper;
 
 namespace WebAppTrain
 {
@@ -25,6 +26,8 @@ namespace WebAppTrain
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper();
+
             services.AddMvc();
 
             var connection = @"Server=(localdb)\mssqllocaldb;Database=WebAppTrainDb;Trusted_Connection=True;";

@@ -18,6 +18,16 @@
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/post']">
+                        <span class='glyphicon glyphicon-envelope'></span> Posts
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/vehicle/new']">
+                        <span class='glyphicon glyphicon-plus'></span> New vehicle
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
                     <a [routerLink]="['/counter']">
                         <span class='glyphicon glyphicon-education'></span> Counter
                     </a>
