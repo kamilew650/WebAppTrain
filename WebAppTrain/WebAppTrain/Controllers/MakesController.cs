@@ -24,12 +24,12 @@ namespace WebAppTrain.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet("/api/makes")]
-        public async Task<IEnumerable<MakeResource>> GetMakes()
-        {
-            var makes = await context.Makes.Include(m => m.Models).ToListAsync();
+        //[HttpGet("/api/makes")]
+        //public async Task<IEnumerable<MakeResource>> GetMakes()
+        //{
+        //    var makes = await context.Makes.Include(m => m.Models).ToListAsync();
 
-            return mapper.Map<List<Make>, List<MakeResource>>(makes);
-        }
+        //    return mapper.Map<List<Make>, List<MakeResource>>(makes);
+        //}
     }
 }

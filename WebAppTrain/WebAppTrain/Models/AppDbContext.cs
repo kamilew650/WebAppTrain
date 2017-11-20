@@ -12,8 +12,6 @@ namespace WebAppTrain.Models
             : base(options)
         { }
 
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Make> Makes { get; set; }
         public DbSet<Post> Posts { get; set; }
     }
 }
