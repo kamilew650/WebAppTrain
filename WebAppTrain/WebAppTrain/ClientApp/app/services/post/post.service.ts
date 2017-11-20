@@ -14,13 +14,20 @@ export class PostService {
     
     constructor( private http: Http) {}
 
+    private url = 'http://localhost:54300/api/post';
+
     getPost(): Observable<Post[]>{
-        const url = 'http://localhost:54300/api/post';
-        return this.http.get(url)
+        return this.http.get(this.url)
             .map(response => response.json() as Post[])
             .catch(this.handleError);
     }
 
+    getOnePost(id: number): Observable<Post>{
+        const Url = '${this.url}/${id}';
+        return this.http.get(Url)
+          .map(response => response.json() as Post)
+          .catch(this.handleError);
+    }
 
     private handleError(error: any): Observable<any> {
         console.error('An error occurred', error);

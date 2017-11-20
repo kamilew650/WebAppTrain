@@ -14,6 +14,7 @@ import { PostViewComponent } from './components/post-view/post-view.component';
 import { PostService } from './services/post/post.service';
 
 import { AppRoutingModule } from './app-routing.module';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
         FetchDataComponent,
         HomeComponent,
         VehicleFormComponent,
-        PostViewComponent
+        PostViewComponent,
+        PostDetailsComponent
     ],
     imports: [
         CommonModule,
