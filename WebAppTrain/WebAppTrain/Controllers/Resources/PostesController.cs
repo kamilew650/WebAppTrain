@@ -26,5 +26,11 @@ namespace WebAppTrain.Controllers.Resources
 
             return postes;
         }
+
+        [HttpGet("/api/posts/{Id}")]
+        public async Task<Post> GetPostsById(int vrpId)
+        { 
+            return context.Posts.Where(x => x.Id == vrpId).FirstOrDefault();
+        }
     }
 }
